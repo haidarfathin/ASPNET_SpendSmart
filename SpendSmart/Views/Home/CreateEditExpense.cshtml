@@ -1,0 +1,21 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Add/Edit Expense";
+}
+@model SpendSmart.Models.Expense
+<div class="text-center">
+    <h1 class="display-4">Add or Edit your Expenses</h1>
+</div>
+
+<form asp-action="CreateEditForm" asp-asp-controller="Home">
+
+    <input hidden class="form-control" type="number" placeholder="0" asp-for="Id" />
+    <label class="mt-4">Value</label>
+    <input class="form-control" type="number" placeholder="0" asp-for="Value" />
+    <label class="mt-4">Description</label>
+    <input class="form-control" type="text" placeholder="Add Description" asp-for="Description" />
+
+    <button class="btn btn-primary mt-4" type="submit">Add</button>
+</form>
